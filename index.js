@@ -1,10 +1,10 @@
 let stopWords = [...require('stopwords').english, ...require('./customStopWords.js')];
 
 let volumes = {
-	'bofm': ['the book of mormon', 'book or mormon', 'bom'],
-	'nt': ['the new testament', 'new testament', 'bible'],
-	'ot': ['old testament', 'bible'],
-	'dc-testament': ['doctrine and covenants', 'd and c', 'd & c'],
+	'bofm': ['the book of mormon', 'book of mormon', 'bom', 'bofm'],
+	'nt': ['the new testament', 'new testament', 'bible', 'nt'],
+	'ot': ['the old testament', 'old testament', 'bible', 'ot'],
+	'dc-testament': ['doctrine and covenants', 'd and c', 'd & c', 'd&c'],
 	'pgp': ['pearl of great price', 'pgp', 'moses', 'jst', 'abraham']
 };
 
