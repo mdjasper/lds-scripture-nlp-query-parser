@@ -1,4 +1,4 @@
-let stopWords = [...require('stopWords').english, ...require('./customStopWords.js')];
+let stopWords = [...require('stopwords').english, ...require('./customStopWords.js')];
 
 let volumes = {
 	'bofm': ['the book of mormon', 'book or mormon', 'bom'],
