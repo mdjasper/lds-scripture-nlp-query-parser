@@ -1,10 +1,11 @@
 let stopWords = [...require('stopWords').english, ...require('./customStopWords.js')];
 
 let volumes = {
-	'book-of-mormon': ['the book of mormon', 'bom'],
-	'new-testament': ['the new testament', 'new testament'],
-	'old-testament': ['old testament'],
-	'doctrine-and-covenants': ['doctrine and covenants', 'd and c', 'd & c']
+	'bofm': ['the book of mormon', 'book or mormon', 'bom'],
+	'nt': ['the new testament', 'new testament'],
+	'ot': ['old testament'],
+	'dc-testament': ['doctrine and covenants', 'd and c', 'd & c'],
+	'pgp': ['pearl of great price', 'pgp', 'moses', 'jst', 'abraham']
 };
 
 let findTerms = (phrase) => {
@@ -24,15 +25,15 @@ let findTerms = (phrase) => {
 };
 
 let findVolume = (phrase) => {
-	let foundVolume = '';
+	let foundVolumes = [];
 	Object.keys(volumes).forEach((volume) => {
 		volumes[volume].forEach((variant) => {
 			if(phrase.indexOf(variant) >= 0){
-				foundVolume = volume;
+				foundVolumes.push(volume);
 			}
 		})
 	});
-	return foundVolume;
+	return foundVolumes;
 };
 
 let parse = (phrase = '') => {
