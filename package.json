@@ -1,6 +1,6 @@
 {
   "name": "lds-scripture-nlp-query-parser",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A natural language parser for queries about LDS Scriptures",
   "main": "index.js",
   "scripts": {
