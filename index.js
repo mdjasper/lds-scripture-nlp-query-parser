@@ -41,7 +41,7 @@ let parse = (phrase = '') => {
 	phrase = phrase.toLowerCase();
 
 	return {
-		volume: findVolume(phrase),
+		testaments: findVolume(phrase),
 		terms: findTerms(phrase)
 	};
 };
